@@ -1,0 +1,98 @@
+* {
+    box-sizing: border-box;
+}
+
+html, body {
+    margin: 0;
+    padding: 0;
+}
+
+img {
+    max-width: 100%;
+}
+
+body {
+    font-family: 'Roboto Slab', sans-serif;
+    font-size: 20px;
+    line-height: 1.4;
+    background: #1A1E26;
+    color: #fff;
+}
+
+h1, h2, h3 {
+    font-family:'Roboto Slab', sans-serif;
+    font-weight: 900;
+}
+
+h1 {
+    font-size: 120px;
+    line-height: .9;
+}
+
+h2 {
+    font-size: 50px;
+    line-height: .1;
+}
+
+a {
+    color: #F6BE00;
+}
+
+a:hover,
+a:focus {
+    color: #fff;
+}
+
+.container{
+    margin: 0 auto;
+    max-width: 1000px;
+    padding: 0 2em;
+}
+
+.col {
+    margin: 0 1em;
+}
+
+.col img {
+    width: 1500px;
+    height: 60%;
+}
+
+.accent-bg {
+    background-color: #F6BE00;
+} 
+
+.split {
+    display: flex;
+}
+
+.extra-space {
+    margin-top: 10rem;
+}
+
+header, section {
+    padding: 10rem 0;
+}
+
+.bruce {
+    background-image: url(img/main.png);
+    text-align: left;
+    padding: 14rem 0 25rem;
+    background-size: cover;
+    background-position: bottom right;
+}
+
+.btn {
+    display: inline-block;
+    color: inherit;
+    text-transform: uppercase;
+    background-color: #1A1E26;
+    text-decoration: none;
+    padding: .5em 1.25em;
+}
+
+.btn:hover,
+.btn:focus {
+    background: white;
+    color: black;
+}

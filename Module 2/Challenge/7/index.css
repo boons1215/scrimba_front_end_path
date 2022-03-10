@@ -1,0 +1,41 @@
+body {
+    margin: 0;
+}
+
+/* solution with h1 only */
+
+h1 {
+    background-color: #281B2D;
+    color: #fff;
+    text-align: center;
+    font-size: 72px;
+    margin-top: 0;
+    padding: 25px 0;
+}
+
+
+/* solution with header styled */
+
+/* header {
+    background-color: #281B2D;
+    color: #fff;
+    text-align: center;
+    padding: 20px;
+}
+
+h1 {
+    font-size: 72px;
+    margin: 0;
+} */
+
+.subhead {
+    font-size: 48px;
+    color: #fcd801;
+    background: #281B2D;
+    border-bottom: #00c54c solid 6px;    
+    padding: 20px;
+}
+
+.white-text {
+    color: #fff;
+}

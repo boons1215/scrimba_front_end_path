@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<!--Box default width is 100%, height is 0, on top of one another-->
+
+<!--4 sides margin: margin-left/right/top/bottom-->
+
+<!--padding is empty space inside an element, panding include background color-->
+
+<!-- if need empty space, use margin
+     if more background, use padding -->
+
+<!--borders around element, border-width/style/color-->
+
+<!--
+----------------------------------
+|            margin              |
+|    --------border-----------   |
+|    |       padding         |   |
+|    |    ----------------   |   |
+|    |    |  content      |  |   |
+|    |    ----------------   |   |
+|    |                       |   |
+|    --------border----------|   |
+|                                |
+----------------------------------
+-->
+
+<!-- ID can only used one time per page, classes can be reused, ID overwrite a class selector-->
+<!-- use classes selector for styling purpose -->
+
+<!-- use spans to change the font itself, weight, color, style, etc -->
+
+<!-- div to control layouts -->
+
+<!-- flexbox css layout tool - column -->
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Moonbase Alpha</title>
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link
+        href="https://fonts.googleapis.com/css2?family=PT+Sans:ital,wght@0,400;0,700;1,400&family=Source+Sans+Pro:wght@900&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="box-model.css">
+</head>
+
+<body>
+    <main>
+        <h1>The CSS Box Model</h1>
+        <p>default box</p>
+
+        <p class="adjust text-center">We can declare widths and heights on elements to define their size. We also have
+            other
+            properties
+            like margins,
+            padding, and borders which make up the box model. Lorem ipsum dolor, sit amet consectetur adipisicing
+            elit.
+            Architecto eos repudiandae ea dolorem? Nemo, blanditiis. Dolore possimus culpa perferendis fuga ducimus
+            facilis
+            maiores distinctio reprehenderit, fugit adipisci consequuntur, repellendus nam. Lorem ipsum dolor sit
+            amet
+            consectetur adipisicing elit. Illum alias magni nemo, natus unde, id fugit nobis sunt amet, ea molestiae
+            ducimus! Nulla, ducimus. Laborum, sint. Voluptate aspernatur laborum est. </p>
+        <hr>
+
+        <section id="margin" class="bg-dark">
+            <h2>margin</h2>
+            <p>Margin is used to control the space around an element.</p>
+        </section>
+        <hr>
+
+        <section id="padding" class="bg-light">
+            <h2>Padding</h2>
+            <p>Padding is a lot like margin, except that it adds the empty space <em>inside</em> the element, which
+                includes
+                it's background-color.</p>
+        </section>
+        <hr>
+
+        <section id="border">
+            <h2>Borders</h2>
+            <p>Borders are a line that surrounds an element, similar to a stroke if you are familiar with design
+                software.
+            </p>
+        </section>
+    </main>
+</body>
+
+</html>
