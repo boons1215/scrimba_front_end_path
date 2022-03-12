@@ -1,0 +1,57 @@
+html, body {
+    margin: 0;
+    padding: 0;
+    background: black;
+    color: #fff;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.upper-container {
+    display: block;
+    text-align: center;
+    background-image: linear-gradient(
+        190deg,
+        hsl(240deg 100% 1%) 0%,
+        hsl(263deg 25% 12%) 11%,
+        hsl(292deg 27% 18%) 22%,
+        hsl(319deg 36% 27%) 33%,
+        hsl(334deg 43% 36%) 44%,
+        hsl(347deg 46% 46%) 56%,
+        hsl(0deg 56% 56%) 67%,
+        hsl(14deg 79% 59%) 78%,
+        hsl(27deg 95% 58%) 89%,
+        hsl(41deg 100% 50%) 100%
+    );
+    background-size: cover;
+    padding: 8% 10% 5% 10%;
+    margin: auto;
+}
+
+.upper-container span {
+    font-size: 100px;
+    font-weight: bold;
+    margin-top: 5%;
+}
+
+.lower-container {
+    display: block;
+    text-align: center;
+    margin-top: 5%;
+}
+
+.lower-container h3 {
+    padding-top: 2%;
+    font-size: 18px;
+}
+
+.lower-container span {
+    color: lightgray;
+    font-size: 15px;
+}
+
+.col-btn {
+    text-align: center;
+    margin-top: 10%;
+    margin-bottom: auto;
+    border-radius: none;
+}
