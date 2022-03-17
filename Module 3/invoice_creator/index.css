@@ -118,13 +118,14 @@ html, body {
 #sendInvoice-btn {
     margin: 10px;
     padding: 5px 200px;
-    background: rgb(44, 133, 184);
-    color: whitesmoke;
+    background: rgb(203, 231, 217);
+    color: black;
     border: none;
     border-radius: 3px;
+    font-size: 12px;
 }
 
-#sendInvoice-btn:hover {
+button {
     text-decoration: none;
     overflow: hidden;
     cursor: pointer;
