@@ -1,0 +1,68 @@
+body {
+    margin: 0;
+    font-family: "lato", sans-serif;
+    font-size: 18px;
+    color: #2e354f;
+}
+
+h1, h2, strong {
+    font-weight: 900;
+}
+
+h1 {
+    font-size: 36px;
+    margin: 0;
+}
+
+h2 {
+    font-size: 24px;
+    color: #ef5839;
+}
+
+a {
+    color: #ef5839;
+}
+
+a:hover, a:focus {
+    color: #d4b44c;
+}
+
+
+/* button */
+.btn {
+    display: inline-block;
+    padding: 10px 25px;
+    text-decoration: none;
+}
+
+.contact-btn {    
+    background: #ef5839;
+    color: #fff;
+}
+
+.contact-btn:hover {
+    background: #d4b44c;
+    color: #000;
+}
+
+.info-btn {
+    background: #fff;
+    color: #000;
+}
+
+.info-btn:hover {
+    color: #fff;
+    background: #000;
+}
+
+/* Layout */
+.container {
+    width: 620px;
+    margin: 0 auto;
+    padding: 45px 0;
+}
+
+header, .section-two {
+    background: #2e354f;
+    color: #fff;
+}

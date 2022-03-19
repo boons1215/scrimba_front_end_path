@@ -1,0 +1,114 @@
+body {
+    text-align: center;
+    font-family: "Roboto", Arial, Helvetica, sans-serif;
+    font-size: 21px;
+    font-weight: 300;
+    margin: 0 auto;
+}
+
+.container {
+    width: 570px;
+    margin: 0 auto;
+}
+
+/* typography */
+h1, h2, h3 {
+    font-weight: 300;
+    margin-top: 0;
+}
+
+h1 {
+    font-size: 60px;
+}
+
+h2 {
+    font-size: 42px;
+    margin-top: 0;
+    margin-bottom: 20px;
+    border-top: solid 1px #c4c4c4;
+    border-bottom: solid 1px #c4c4c4; 
+    padding: 30px 0;
+}
+
+h3 {
+    font-size: 36px;
+    font-weight: 900;
+    margin-bottom: 0;
+}
+
+h1 .bold-text {
+    font-size: 80px;
+}
+
+h2 .bold-text {
+    font-size: 60px;
+}
+
+p {
+    margin-bottom: 0;
+}
+
+a {
+    color: #99d930;
+}
+
+a:hover, a:focus {
+    color: firebrick;
+}
+
+.small {
+    font-size: 16px;
+    margin-top: 5px;
+}
+
+.bold-text {
+    font-weight: 900;
+    display: block;
+}
+
+.green-accent {
+    color: #99d930;
+    font-weight: 900;
+}
+
+h1 .green-accent {
+    font-size: 80px;
+    display: block;
+}
+
+h2 .green-accent {
+    font-size: 60px;
+    display: block;
+}
+
+/* layout */
+header, section {
+    padding: 100px 0;
+}
+
+.inverse {
+    background: #252525;
+    color: #fff;
+}
+
+/* button */
+.btn {
+    display: inline-block;
+    margin-top: 25px;
+    padding: 10px 25px;
+    color: #252525;
+    background: #99d930;
+    text-decoration: none;
+    font-weight: 900;
+}
+
+.inverse .btn:hover,
+.inverse .btn:focus {
+    background: #fff;
+    color: #000;
+}
+
+.btn:hover, .btn:focus {
+    background: #252525;
+    color: #fff;
+}
