@@ -1,0 +1,182 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    font-family: "Source Sans Pro", sans-serif;
+    font-size: 1rem;
+    color: #404040;
+    text-align: center;
+}
+
+/* typography */
+
+h1 {
+    font-size: 2.25rem;
+    font-weight: 300;
+    color: #fff;
+    margin: 0;
+}
+
+h1 + p,
+.top-text,
+h2 + p {
+    text-transform: uppercase;
+    color: #f18119;
+    font-weight: 900;
+}
+
+h1 + p {
+    font-size: 1.3125rem;
+    margin: 0;
+}
+
+h2 {
+    font-size: 1.3125rem;
+    margin: 0;
+}
+
+h2 + p {
+    font-size: 1rem;
+    margin-top: 0;
+}
+
+strong {
+    font-weight: 900;
+}
+
+.top-text {
+    font-size: 0.625rem;
+    letter-spacing: 1px;
+    order: -1;
+    border-top: 5px solid #ff713b;
+    border-image: linear-gradient(to left, #ff713b, #ffa51d) 1;
+    width: fit-content;
+    margin: 0 auto;
+    padding-top: 1px;
+}
+
+.fine-print {
+    font-size: 0.625rem;
+    letter-spacing: 1px;
+}
+
+/* layout */
+
+.intro {
+    background-color: #404040;
+    background-image: url(../images/ribs.jpg), linear-gradient(45deg, darkgray, rgb(243, 242, 242));
+    background-blend-mode: multiply;
+    background-size: cover;
+    background-position: center;
+    padding: 0 .5em 2em;
+}
+
+.main-content {
+    padding: 2em 1em;
+}
+
+.intro > *,
+.main-content > * {
+    max-width: 400px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.container {
+    max-width: 480px;
+    margin: 0 auto;
+}
+
+.container-intro {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    min-height: 50vh;
+}
+
+/* form */
+
+.email-collector {
+    width: 80%;
+    max-width: 300px;
+}
+
+input,
+.btn {
+    width: 100%;
+    border-radius: 5px;
+}
+
+input {
+    font-family: inherit;
+    text-align: inherit;
+    margin-bottom: .75em;
+    padding: .25em 0;
+    border: 1px solid #404040;
+    transform: scale(1);
+    transition: transform 250ms;
+}
+
+input:focus {
+    transform: scale(1.1);
+}
+
+.btn {
+    display: inline-block;
+    padding: 1em 1.5em;
+    font-size: 0.625rem;
+    text-transform: uppercase;
+    font-weight: 900;
+    letter-spacing: 1px;
+    border: 0;
+    cursor: pointer;
+}
+
+.btn-primary {
+    background-image: linear-gradient(to left, #ff713b, #ffa51d);
+    color: #fff;
+    transition: color 900ms;
+    transition: transform 250ms;
+    transform: scale(1);
+}
+
+.btn-primary:hover,
+.btn-primary:focus {
+    transform: scale(1.1);
+}
+
+/* media query */
+
+@media (min-width: 500px) {
+    body {
+        font-size: 1.125rem;
+        display: flex;
+    }
+
+    h1 {
+        font-size: 3.5rem;
+    }
+
+    h2,
+    h1 + p {
+        font-size: 1.75rem;
+    }
+
+    .intro,
+    .main-content {
+        width: 50%;
+        min-height: 100vh;
+    }
+
+    .main-content {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+    }
+
+    .container-intro {
+        height: 100%;
+    }
+}
