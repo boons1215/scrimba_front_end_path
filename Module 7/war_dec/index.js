@@ -41,34 +41,41 @@ function determineCardWinner(card1, card2) {
 newDeckBtn.addEventListener("click", handleClick)
 
 // draw two new cards
-drawCardBtn.addEventListener("click", () => {
-    fetch(`https://apis.scrimba.com/deckofcards/api/deck/${deckId}/draw/?count=2`)
-        .then(resp => resp.json())
-        .then(data => {
-            if (data.remaining === 0) {
-                drawCardBtn.disabled = true
+drawCardBtn.addEventListener("click", async () => {
+    const resp = await fetch(`https://apis.scrimba.com/deckofcards/api/deck/${deckId}/draw/?count=2`)
+    const data = await resp.json()
+    if (data.remaining === 0) {
+        drawCardBtn.disabled = true
 
-                computerScore > myScore ? header.textContent = "The computer won the game!" : myScore > computerScore ? header.textContent = "You won the game!" : "It is a tie game!"
-            }
+        computerScore > myScore ? header.textContent = "The computer won the game!" : myScore > computerScore ? header.textContent = "You won the game!" : "It is a tie game!"
+    }
 
-            remainingCards.textContent = "Remaining cards: " + data.remaining
+    // fetch(`https://apis.scrimba.com/deckofcards/api/deck/${deckId}/draw/?count=2`)
+    //     .then(resp => resp.json())
+    //     .then(data => {
+    //         if (data.remaining === 0) {
+    //             drawCardBtn.disabled = true
 
-            cardsContainer.children[0].innerHTML = `
-                <img src="${data.cards[0].image}" class="card-size"/>
-            `
-            cardsContainer.children[1].innerHTML = `  
-                <img src="${data.cards[1].image}" class="card-size"/>
+    //             computerScore > myScore ? header.textContent = "The computer won the game!" : myScore > computerScore ? header.textContent = "You won the game!" : "It is a tie game!"
+    //         }
 
-            `
+    remainingCards.textContent = "Remaining cards: " + data.remaining
 
-            const result = determineCardWinner(data.cards[0].value, data.cards[1].value)
+    cardsContainer.children[0].innerHTML = `
+        <img src="${data.cards[0].image}" class="card-size"/>
+    `
+    cardsContainer.children[1].innerHTML = `  
+        <img src="${data.cards[1].image}" class="card-size"/>
 
-            setTimeout(() => {
-                header.textContent = result, 500})
+    `
 
-            computerScoreEl.textContent = `Computer score: ${computerScore}`
-            myScoreEl.textContent = `My score: ${myScore}`
-        })
+    const result = determineCardWinner(data.cards[0].value, data.cards[1].value)
+
+    setTimeout(() => {
+        header.textContent = result, 500})
+
+    computerScoreEl.textContent = `Computer score: ${computerScore}`
+    myScoreEl.textContent = `My score: ${myScore}`
 })
 
 
