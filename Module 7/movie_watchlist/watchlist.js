@@ -5,10 +5,10 @@ async function renderWatchlist() {
     watchlistEl.innerHTML = "";
 
     for (key in localStorage) {
-        if (key.substring(0,11) == 'movieObject') {
+        if (key.substring(0,2) == 'tt') {
             const jsonString = localStorage.getItem(key);
             const localData = JSON.parse(jsonString);
-
+            console.log(key)
             watchlistEl.innerHTML += `
                 <div class="col">
                     <div class="movie-poster">

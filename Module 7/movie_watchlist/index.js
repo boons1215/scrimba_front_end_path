@@ -6,58 +6,59 @@ const filmEl = document.getElementById("film-container");
 const filmTypeEl = document.getElementById("film-type");
 const searchStatusEl = document.getElementById("search-status");
 const saveBtn = document.getElementById("add-watchlist")
-const movieArr = []
+let movieArr = [];
 
 // render search list page
 async function renderMovieList(filmData, filmType) {
     searchStatusEl.textContent = await `Search for: ${filmType} (result: ${filmData.length})`
+    movieArr = [];
 
     for (let id of filmData) {
-        fetch(`http://www.omdbapi.com/?apikey=2fadc37a&i=` + id)
-            .then(resp => resp.json())
-            .then(data => {
-                movieArr.push({
-                    id: id,
-                    image: data.Poster, 
-                    title: data.Title, 
-                    rating: data.imdbRating, 
-                    runtime: data.Runtime, 
-                    genre: data.Genre, 
-                    plot: data.Plot
-                })
+        const resp = await fetch(`http://www.omdbapi.com/?apikey=2fadc37a&i=` + id);
+        const data = await resp.json();
 
-                filmEl.innerHTML += `
-                    <div class="col">
-                        <div class="movie-poster">
-                            <img src="${data.Poster}" id="poster" />
-                        </div>
-                        <div class="movie-info">
-                            <div class="col-title">
-                                <p class="p-title">${data.Title}</p>
-                                <p class="p-ranting">⭐ ${data.imdbRating}</p>
-                            </div>
+        movieArr.push({
+            id: id,
+            image: data.Poster, 
+            title: data.Title, 
+            rating: data.imdbRating, 
+            runtime: data.Runtime, 
+            genre: data.Genre, 
+            plot: data.Plot
+        })
 
-                            <div class="col-info">
-                                <p class="p-info">${data.Runtime}</p>
-                                <p class="p-info">${data.Genre}</p>
-                                <button id="${filmData.indexOf(id)}" class="watchlist" onclick="saveToWatchlist(this)">➕ Watchlist</button>
-                            </div>
+        filmEl.innerHTML += `
+            <div class="col">
+                <div class="movie-poster">
+                    <img src="${data.Poster}" id="poster" />
+                </div>
+                <div class="movie-info">
+                    <div class="col-title">
+                        <p class="p-title">${data.Title}</p>
+                        <p class="p-ranting">⭐ ${data.imdbRating}</p>
+                    </div>
 
-                            <div class="col-plot">
-                                <p class="p-plot">${data.Plot} <a href="https://www.imdb.com/title/${id}/" target="_blank"> Read more on imdb ...</a>
-                                </p>
-                            </div>
-                        </div>
-                    </div><hr />
-                `
-            });
+                    <div class="col-info">
+                        <p class="p-info">${data.Runtime}</p>
+                        <p class="p-info">${data.Genre}</p>
+                        <button id="${filmData.indexOf(id)}" class="watchlist" onclick="saveToWatchlist(this)">➕ Watchlist</button>
+                    </div>
+
+                    <div class="col-plot">
+                        <p class="p-plot">${data.Plot} <a href="https://www.imdb.com/title/${id}/" target="_blank"> Read more on imdb ...</a>
+                        </p>
+                    </div>
+                </div>
+            </div><hr />
+        `
     };
 };
 
 // store the watchlist in local storage
 function saveToWatchlist(event) {
     const id = event.getAttribute('id');
-    localStorage.setItem(`movieObjects${id}`, JSON.stringify(movieArr[id]));
+    console.log(movieArr)
+    localStorage.setItem(movieArr[id].id, JSON.stringify(movieArr[id]));
 };
 
 // retrieve film list by searching
