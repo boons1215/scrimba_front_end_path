@@ -14,7 +14,7 @@ async function renderMovieList(filmData, filmType) {
     movieArr = [];
 
     for (let id of filmData) {
-        const resp = await fetch(`http://www.omdbapi.com/?apikey=2fadc37a&i=` + id);
+        const resp = await fetch(`https://www.omdbapi.com/?apikey=2fadc37a&i=` + id);
         const data = await resp.json();
 
         movieArr.push({
@@ -72,7 +72,7 @@ searchForm.addEventListener("submit", async event => {
     let filmType = filmTypeEl.options[filmTypeEl.selectedIndex].value;
 
     // fetch data from the api server
-    const response = await fetch(`http://www.omdbapi.com/?apikey=2fadc37a&type=` + filmType + `&s=` + searchString);
+    const response = await fetch(`https://www.omdbapi.com/?apikey=2fadc37a&type=` + filmType + `&s=` + searchString);
     const data = await response.json();
 
     if (data.Response === "True") {
