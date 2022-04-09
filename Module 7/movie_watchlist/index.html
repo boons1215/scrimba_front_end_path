@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Search Movie</title>
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Exo+2:wght@200;300;400;800;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="index.css">
+</head>
+
+<body>
+    <main>
+        <div class="header">
+            <h1>Find your film</h1>
+            <a href="./watchlist.html">My Watchlist</a>
+        </div>
+
+        <form id="search-container">
+            <input id="search-input" type="text" placeholder="🔍 search movie title...">
+            <select id="film-type">
+                <option value="movie" selected>Movie</option>
+                <option value="series">Series</option>
+                <option value="episode">Episode</option>
+            </select>
+            <button id="search-button" type="submit">Search</button>
+        </form>
+
+        <h4 id="search-status"></h4>
+        <div id="film-container">
+
+        </div>
+    </main>
+
+    <script src="index.js"></script>
+</body>
+
+</html>
