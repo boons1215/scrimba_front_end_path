@@ -1,6 +1,6 @@
 const watchlistEl = document.getElementById("watchlist-container");
 
-// render watchlist page from localstorage
+// render the watchlist page from localstorage
 async function renderWatchlist() {
     watchlistEl.innerHTML = "";
 
@@ -37,11 +37,12 @@ async function renderWatchlist() {
     };
 };
 
-// remove the key from localstorage
+// remove the key from localstorage when remove button has clicked
 function removeFromWatchlist(event) {
     const key = event.getAttribute('id');
     localStorage.removeItem(key);
     renderWatchlist();
 };
 
+// load the rendering when opening the watchlist webpage 
 watchlistEl.addEventListener("load", renderWatchlist());

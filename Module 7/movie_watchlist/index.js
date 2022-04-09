@@ -8,7 +8,7 @@ const searchStatusEl = document.getElementById("search-status");
 const saveBtn = document.getElementById("add-watchlist")
 let movieArr = [];
 
-// render search list page
+// render the search list page, the function must be running as async so that it keep the actual order in the array
 async function renderMovieList(filmData, filmType) {
     searchStatusEl.textContent = await `Search for: ${filmType} (result: ${filmData.length})`
     movieArr = [];
@@ -17,6 +17,7 @@ async function renderMovieList(filmData, filmType) {
         const resp = await fetch(`https://www.omdbapi.com/?apikey=2fadc37a&i=` + id);
         const data = await resp.json();
 
+        // create array for storing the fetched data for localstorage use
         movieArr.push({
             id: id,
             image: data.Poster, 
@@ -54,18 +55,18 @@ async function renderMovieList(filmData, filmType) {
     };
 };
 
-// store the watchlist in local storage
+// set the key in localstorage by using the created array 
+// use the exact imdbId to keep the key in localstorage as unique, preventing user readd the same films in the watchlist
 function saveToWatchlist(event) {
     const id = event.getAttribute('id');
-    console.log(movieArr)
     localStorage.setItem(movieArr[id].id, JSON.stringify(movieArr[id]));
 };
 
-// retrieve film list by searching
+// retrieve film list by searching thru api once the form submitted
 searchForm.addEventListener("submit", async event => {
     event.preventDefault();
     
-    // search input and search type
+    // insert the search input and define the search type
     filmEl.innerHTML = "";
     let imdbIdArray = [];
     const searchString = searchEl.value;
@@ -81,6 +82,7 @@ searchForm.addEventListener("submit", async event => {
         // render the contents
         renderMovieList(imdbIdArray, filmType);
     } else {
+        // no result report when the search is empty
         searchStatusEl.textContent = `Search for: ${filmType} - no result`
     }
 });

@@ -11,7 +11,8 @@ input {
     font-family: "Exo 2", sans-serif;
 }
 
-/* <-- top --> */
+/* <-- Header container --> */
+
 div.header {
     background-color: #404040;
     background-image: url("./img/best-movies-1614634680.webp"), linear-gradient(45deg, darkgray, rgb(243, 242, 242));
@@ -65,7 +66,8 @@ div.header a:hover {
     }
 }
 
-/* <- search -> */
+/* <-- Search Bar --> */
+
 form#search-container {
     display: flex;
     gap: 0;
@@ -136,7 +138,8 @@ form button:hover {
     }
 }
 
-/* <- result -> */
+/* <-- File search result container --> */
+
 hr {
     border-color: rgb(247, 251, 254);
     border-style: groove;
