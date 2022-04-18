@@ -1,0 +1,62 @@
+html,
+body {
+    padding: 0;
+    margin: 0;
+}
+
+body {
+    height: 100vh;
+    display: grid;
+    grid-template-columns: repeat(3, auto);
+    place-items: center;
+    background-color: lightblue;
+    grid-gap: 2em;
+}
+
+.card {
+    background-color: white;
+}
+
+span {
+    height: 100px;
+    display: block;
+    width: 100%;
+    background-color: #71a6b8;
+}
+
+p.date {
+    text-align: center;
+    font-size: .7em;
+    text-transform: uppercase;
+}
+
+h3 {
+    margin: 0;
+}
+
+p.desc {
+    font-size: .9em;
+}
+
+/* overwrite */
+
+body {
+    padding: 0 2em;
+}
+
+.content {
+    padding: 1em;
+}
+
+p.date {
+    text-align: left;
+    margin: 0;
+}
+
+h3 {
+    text-align: left;
+}
+
+p.desc {
+    margin-bottom: 0;
+}

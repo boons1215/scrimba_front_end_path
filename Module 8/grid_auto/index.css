@@ -1,0 +1,35 @@
+.grid {
+    display: grid;
+    grid-template-columns: 150px 150px 150px;
+
+    /* align-items: center; */
+    /* align-items: start; */
+
+    justify-items: stretch;
+    /* default */
+}
+
+.grid-item {
+    background-color: purple;
+    color: white;
+    padding: 1em 2em;
+    border: 2px solid white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.big {
+    padding: 3em 2em;
+    background-color: orange;
+}
+
+.start {
+    align-items: start;
+    justify-self: start;
+}
+
+.end {
+    align-items: end;
+    justify-self: end;
+}

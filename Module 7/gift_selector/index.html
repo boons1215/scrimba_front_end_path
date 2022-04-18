@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Karla:wght@500;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="index.css">
+    <title>Gift Selector</title>
+</head>
+
+<body>
+    <h1>Gift Selector 💝</h1>
+
+    <p class="result" id="result">Total gift cost: <span id="cost-el">...</span></p>
+    <form>
+        <h3>Select food:</h3>
+        <select id="food-type">
+            <option value="" selected>--Please select an option--</option>
+            <option value="5">🍓 strawberries - $5</option>
+            <option value="10">🍫 chocolate - $10</option>
+            <option value="20">🧁 cupcakes - $20</option>
+        </select>
+        <br>
+
+        <h3>Select transport:</h3>
+        <select id="transport-type">
+            <option value="" selected>--Please select an option--</option>
+            <option value="5">🛼 rollerskates - $5</option>
+            <option value="50">🚘 limo - $50</option>
+            <option value="500">🚁 helicopter - $500</option>
+        </select>
+        <br>
+
+        <div>
+            <label for="ballon-checkbox">Add balloons? 🎈</label>
+            <input type="checkbox" id="ballon-checkbox" name="ballon-checkbox" checked>
+        </div>
+
+        <button id="btn" type="button">Calculate</button>
+    </form>
+
+    <script src="index.js"></script>
+</body>
+
+</html>

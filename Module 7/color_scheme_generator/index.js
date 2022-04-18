@@ -24,6 +24,7 @@ function render() {
     };
 };
 
+// click and save the hex of color
 function saveHex(event) {
     const copyValue = event.getAttribute('id');
     navigator.clipboard.writeText(copyValue)
@@ -57,6 +58,7 @@ function loadSelection() {
         });
 };
 
+// load default when the page open
 loadSelection() ;
 
 // submit button to update the selection
