@@ -1,0 +1,28 @@
+@import url('https://fonts.googleapis.com/css?family=Montserrat:400,700&display=swap');
+
+html,
+body {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background: url('./../sample1/sky2_dark.jpg');
+    background-size: cover;
+    color: white;
+    font-family: 'Montserrat';
+}
+
+.container {
+    padding: 14em 4em;
+    display: grid;
+}
+
+h1 {
+    font-size: 3em;
+    margin-bottom: 0;
+}
+
+p {
+    font-size: 1.3em;
+}
